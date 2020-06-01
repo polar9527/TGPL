@@ -1,8 +1,7 @@
-package main
+package ex7_1
 
 import (
 	"bufio"
-	"fmt"
 	"strings"
 )
 
@@ -30,17 +29,4 @@ func (l *LinesCounter) Write(in string) (int, error) {
 		*l++
 	}
 	return int(*l), scanner.Err()
-}
-
-func main() {
-	input := "Spicy jalapeno pastrami ut ham turducken.\n Lorem sed ullamco, leberkas sint short loin strip steak ut shoulder shankle porchetta venison prosciutto turducken swine.\n Deserunt kevin frankfurter tongue aliqua incididunt tri-tip shank nostrud.\n"
-
-	var w WordsCounter
-	w.Write(input)
-	fmt.Println(w)
-
-	var l LinesCounter
-	l.Write(input)
-	fmt.Println(l)
-
 }
